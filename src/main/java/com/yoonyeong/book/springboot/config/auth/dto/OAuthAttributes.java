@@ -29,6 +29,9 @@ public class OAuthAttributes {
 
     // 구글
     private static OAuthAttributes ofGoogle(String userAttributeName, Map<String,Object> attributes){
+
+
+        System.out.println(">>> attributes"+attributes);
         return OAuthAttributes.builder()
                 .name((String) attributes.get("name"))
                 .email((String) attributes.get("email"))
@@ -60,6 +63,8 @@ public class OAuthAttributes {
 
     // OAuth2User 에서는 Map에 사용자 정보를 담아서 반환해줌, 거기 담긴 값 하나 하나를 변환
     public static OAuthAttributes of(String registrationId,String userNameAttributeName, Map<String,Object> attributes){
+
+        System.out.println(">>> ID :"+registrationId);
         if("naver".equals(registrationId)){
             return ofNaver("id",attributes);
         }

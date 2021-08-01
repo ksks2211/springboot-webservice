@@ -18,13 +18,17 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
 
     @GetMapping("/")
     public String index(Model model,@LoginUser SessionUser user){
+
+
         model.addAttribute("posts",postsService.findAllDesc());
         if(user !=  null){
-            model.addAttribute("userName",user.getName());
+            System.out.println(user.getName());
+            System.out.println(">>> index Page");
+
+            model.addAttribute("name",user.getName());
         }
         return "index";
     }

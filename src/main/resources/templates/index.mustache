@@ -7,15 +7,15 @@
 
 
 
-            {{# userName }}
-                Logged in as : <span id="user">{{userName}}</span>
+            {{# name }}
+                Logged in as : <span id="user">{{ name }}</span>
                 <a href="/logout" class="btn btn-info active" role="button">Logout</a>
-            {{/ userName }}
+            {{/ name }}
 
-            {{^ userName }}
+            {{^ name }}
                 <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
                 <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
-            {{/ userName }}
+            {{/ name }}
 
 
         </div>
