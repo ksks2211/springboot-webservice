@@ -23,7 +23,7 @@ else
 fi
 
 echo "> New Appication Deploy..."
-JAR_NAME=$(ls -tr $REPOSITORY/*.jar )
+JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1 )
 echo "> JAR_NAME: $JAR_NAME"
 
 chmod +x $JAR_NAME
