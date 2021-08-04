@@ -15,12 +15,12 @@ function find_idle_profile()
 
     if [ ${CURRENT_PROFILE} == real1 ]
     then
-        IDEL_PROFILE=real2
+        IDLE_PROFILE=real2
     else
-        IDEL_PROFILE=real1
+        IDLE_PROFILE=real1
     fi
 
-    echo "${IDEL_PROFILE}"
+    echo "${IDLE_PROFILE}"
 }
 
 
@@ -28,7 +28,7 @@ function find_idle_port()
 {
     IDLE_PROFILE=$(find_idle_profile)
 
-    if [ ${IDEL_PROFILE} == real ]
+    if [ ${IDLE_PROFILE} == real1 ]
     then
         echo "8081"
     else
