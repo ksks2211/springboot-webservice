@@ -1,4 +1,4 @@
-#! /user/bin/env bash
+#! /usr/bin/env bash
 
 function find_idle_profile()
 {
